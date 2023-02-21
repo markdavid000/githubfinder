@@ -1,76 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
-    min-height: 100vh;
-    background: #0c192c;
-    background-position: center;
+body {
+  min-height: 100vh;
+  background: #0c192c;
+  background-position: center;
 }
 
-.container{
-    position: relative;
-    width: 100%;
-    height: 100vh;
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
 }
 
-.bubbles{
-    position: relative;
-    display: flex;
-    z-index: -2000;
+.bubbles {
+  position: relative;
+  display: flex;
+  z-index: -2000;
 }
 
-.bubbles span{
-    position: relative;
-    width: 30px;
-    height: 30px;
-    background-color: #00ffff;
-    margin: 0 4px;
-    border-radius: 50%;
-    box-shadow: 0 0 0 10px #4fc3dc44,
-    0 0 50px #00ffff,
-    0 0 100px #00ffff;
-    animation: animate 15s linear infinite;
-    animation-duration: calc(100s / var(--i));
+.bubbles span {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: #00ffff;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #00ffff, 0 0 100px #00ffff;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(100s / var(--i));
 }
 
-.bubbles span:nth-child(even){
-    background-color: #fc218e;
-    box-shadow: 0 0 0 10px #fc218e44,
-    0 0 50px #fc218e,
-    0 0 100px #fc218e;
+.bubbles span:nth-child(even) {
+  background-color: #fc218e;
+  box-shadow: 0 0 0 10px #fc218e44, 0 0 50px #fc218e, 0 0 100px #fc218e;
 }
 
-@keyframes animate{
-    0%{
-        transform: translateY(100vh) scale(0);
-    }
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
 
-    100%{
-        transform: translateY(-10vh) scale(1);
-    }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
 }
 
-.img{
-    height: 4.5rem;
+.img {
+  height: 4rem;
 }
 
-.button{
-    font-size: 1.5rem;
+.button {
+  font-size: 1.5rem;
 }
 
-.font{
-    font-family: 'Dancing Script', cursive;
-    font-size: 40px;
-    background: -webkit-linear-gradient(rgb(11, 104, 245), #ff48c8);
-     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.font {
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+  background: -webkit-linear-gradient(rgb(11, 104, 245), #ff48c8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.z-index{
-    z-index: 1000;
+.z-index {
+  z-index: 1000;
+}
+
+@media (max-width: 500px) {
+  .font {
+    display: none;
+  }
+
+  .img {
+    margin-top: 1rem;
+  }
 }
